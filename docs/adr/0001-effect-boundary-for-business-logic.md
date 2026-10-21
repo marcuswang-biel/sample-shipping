@@ -8,7 +8,7 @@ Convex handlers mix four jobs: authorization, reads, the business decision and w
 
 ## Decision
 
-1. Business rules live in `packages/domain`, written as Effect programs. The package depends on `effect` only. It never imports `convex` or `@acme/backend`; `packages/domain/.oxlintrc.json` makes that a lint error.
+1. Business rules live in `packages/domain`, written as Effect programs. The package depends on `effect` only. It never imports `convex` or `@shipping/backend`; `packages/domain/.oxlintrc.json` makes that a lint error.
 2. A rule's expected failures are tagged errors (`Schema.TaggedErrorClass`). Its configuration and collaborators are services provided through a `Layer`. Its input is decoded with Effect Schema, so validation is part of the rule.
 3. A Convex handler is the boundary. In order, it:
    1. authorizes (`requireUserId(ctx)`),

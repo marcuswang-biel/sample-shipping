@@ -1,17 +1,17 @@
 {
 	"expo": {
-		"name": "Acme",
-		"slug": "acme",
+		"name": "樣品寄送",
+		"slug": "shipping",
 		"version": "0.1.0",
-		"scheme": "acme",
+		"scheme": "shipping",
 		"orientation": "portrait",
 		"userInterfaceStyle": "automatic",
 		"ios": {
 			"supportsTablet": true,
-			"bundleIdentifier": "com.acme.app"
+			"bundleIdentifier": "com.shipping.app"
 		},
 		"android": {
-			"package": "com.acme.app"
+			"package": "com.shipping.app"
 		},
 		"plugins": ["expo-router", "expo-secure-store", "expo-web-browser"],
 		"experiments": {

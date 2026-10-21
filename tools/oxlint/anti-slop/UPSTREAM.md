@@ -46,7 +46,7 @@ Cross-file isolation is covered by a real Oxlint invocation over dirty and clean
 
 Twelve root-Oxlint errors are enabled: `no-known-value-widening`, `no-module-mocking`, `no-object-parameters`, `no-reflect-apply`, `no-reflect-get`, `no-runtime-typeof`, `no-shape-in-symbol-names`, `no-unknown-parameters`, `no-unknown-type-aliases`, `no-unsafe-dictionary-type`, `no-widen-then-assert`, `require-safety-comment-for-type-assertion`.
 
-`no-module-mocking` runs with `ownedModulePrefixes` set to `./`, `../`, `@/` and `@acme/`. Mocks of third-party packages such as `convex/react` stay allowed, because those packages have no test client to substitute.
+`no-module-mocking` runs with `ownedModulePrefixes` set to `./`, `../`, `@/` and `@shipping/`. Mocks of third-party packages such as `convex/react` stay allowed, because those packages have no test client to substitute.
 
 `no-unknown-returns` stays off. Some functions legitimately return untrusted data that the caller parses next, so enabling it needs a boundary policy first.
 
@@ -55,5 +55,5 @@ Twelve root-Oxlint errors are enabled: `no-known-value-widening`, `no-module-moc
 1. Clone the exact upstream candidate outside this directory and record its SHA.
 2. Compare `src/` with this vendor tree. Select specific fixes and reconcile the differences above.
 3. Keep the MIT license and update the backport list and local differences.
-4. From the monorepo root, run `pnpm --filter @acme/oxlint-anti-slop test` and `pnpm run check`. Tests include real RuleTester cases, plugin-loading positive controls and cross-file isolation.
+4. From the monorepo root, run `pnpm --filter @shipping/oxlint-anti-slop test` and `pnpm run check`. Tests include real RuleTester cases, plugin-loading positive controls and cross-file isolation.
 5. Before enabling a deferred rule, scan with an explicit `jsPlugins` entry and a positive control that proves the rule ran. A zero-diagnostic invocation without plugin loading is not evidence.

@@ -3,7 +3,7 @@ import { RuleTester } from 'oxlint/plugins-dev';
 import { noModuleMockingRule } from '../rules/no-module-mocking.ts';
 
 const tester = new RuleTester({ languageOptions: { parserOptions: { lang: 'ts' } } });
-const owned = [{ ownedModulePrefixes: ['./', '../', '@/', '@acme/', '@acme-app/'] }];
+const owned = [{ ownedModulePrefixes: ['./', '../', '@/', '@shipping/', '@shipping-app/'] }];
 
 tester.run('anti-slop/no-module-mocking', noModuleMockingRule, {
 	valid: [
@@ -22,8 +22,8 @@ tester.run('anti-slop/no-module-mocking', noModuleMockingRule, {
 			"import { vi } from 'vitest'; vi.mock('../auth');",
 			"import { vi } from 'vitest'; vi.mock('./sibling', () => ({}));",
 			"import { vi } from 'vitest'; vi.mock('@/lib/user-session-context');",
-			"import { vi } from 'vitest'; vi.doMock('@acme/shared');",
-			"import { vi } from 'vitest'; vi.mock('@acme-app/routes');",
+			"import { vi } from 'vitest'; vi.doMock('@shipping/shared');",
+			"import { vi } from 'vitest'; vi.mock('@shipping-app/routes');",
 			"import { vi } from 'vitest'; vi.mock(`../lib/ai`);",
 			"import { vi } from 'vitest'; vi.mock(import('../auth'));",
 			"import { vi } from 'vitest'; vi.mock(specifier);",

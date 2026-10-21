@@ -7,7 +7,7 @@ import * as SecureStore from 'expo-secure-store';
 import { env } from '@/lib/env';
 
 /** `scheme` from app.json. The backend trusts `<scheme>://` (NATIVE_APP_SCHEME). */
-const scheme = String(Constants.expoConfig?.scheme ?? 'acme');
+const scheme = String(Constants.expoConfig?.scheme ?? 'shipping');
 
 // Better Auth's official Expo client: the session cookie lives in SecureStore and
 // rides on every request, so the Convex site URL needs no cross-domain cookie.

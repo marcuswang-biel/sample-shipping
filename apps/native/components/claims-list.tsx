@@ -1,4 +1,4 @@
-import { api } from '@acme/backend/convex/_generated/api';
+import { api } from '@shipping/backend/convex/_generated/api';
 import { useQuery } from 'convex/react';
 import { ActivityIndicator, FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 

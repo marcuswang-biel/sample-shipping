@@ -1,5 +1,5 @@
 {
-	"name": "@acme/backend",
+	"name": "@shipping/backend",
 	"version": "0.1.0",
 	"private": true,
 	"description": "Convex backend",
@@ -22,21 +22,21 @@
 		"test": "vitest run"
 	},
 	"dependencies": {
-		"@acme/domain": "workspace:*",
-		"@acme/shared": "workspace:*",
 		"@better-auth/core": "catalog:",
 		"@better-auth/expo": "catalog:",
 		"@convex-dev/better-auth": "catalog:",
 		"@convex-dev/migrations": "catalog:",
+		"@shipping/domain": "workspace:*",
+		"@shipping/shared": "workspace:*",
 		"better-auth": "catalog:",
 		"convex": "catalog:",
 		"convex-helpers": "catalog:",
 		"effect": "catalog:"
 	},
 	"devDependencies": {
-		"@acme/config": "workspace:*",
 		"@convex-dev/eslint-plugin": "^3.0.0",
 		"@edge-runtime/vm": "catalog:",
+		"@shipping/config": "workspace:*",
 		"@types/node": "catalog:",
 		"convex-test": "catalog:",
 		"eslint": "8.57.1",

@@ -10,5 +10,5 @@ export const Route = createFileRoute('/')({
 function IndexRedirect() {
 	const { isAuthenticated, isLoading } = useConvexAuth();
 	if (isLoading) return <Loader />;
-	return <Navigate to={isAuthenticated ? '/claims' : '/sign-in'} replace />;
+	return <Navigate to={isAuthenticated ? '/shipments' : '/sign-in'} replace />;
 }

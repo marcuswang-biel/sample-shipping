@@ -1,11 +1,11 @@
-import type { Id } from '@acme/backend/convex/_generated/dataModel';
+import type { Id } from '@shipping/backend/convex/_generated/dataModel';
 
-import { api } from '@acme/backend/convex/_generated/api';
-import { convexErrorCode } from '@acme/shared/convex-error';
-import { isAppErrorCode } from '@acme/shared/error-codes';
-import { Button, Card, CardContent, CardHeader, CardTitle, Input, Label } from '@acme/web-ui';
 import { convexQuery, useConvexMutation } from '@convex-dev/react-query';
 import { Trans, useLingui } from '@lingui/react/macro';
+import { api } from '@shipping/backend/convex/_generated/api';
+import { convexErrorCode } from '@shipping/shared/convex-error';
+import { isAppErrorCode } from '@shipping/shared/error-codes';
+import { Button, Card, CardContent, CardHeader, CardTitle, Input, Label } from '@shipping/web-ui';
 import { useQuery } from '@tanstack/react-query';
 import { createFileRoute } from '@tanstack/react-router';
 import { Trash2 } from 'lucide-react';

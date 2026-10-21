@@ -60,7 +60,7 @@ pnpm workspaces with Turborepo.
 - Owner-scoped data stores `ownerId` = `requireUserId(ctx)` (the token subject) and checks it on every read and write.
 - Import mutation builders from `convex/functions.ts`, never `_generated/server`. The wrapper runs database triggers.
 - `ctx.db.get/patch/replace/delete` take the table name first.
-- Lingui source locale is `zh-Hant`; locales are `zh-Hant` and `en`. JSX uses `<Trans>`. React strings use `useLingui` from `@lingui/react/macro`; other strings use `t` from `@lingui/core/macro`. Static maps use `msg`, resolved with `t(descriptor)`. After changing strings, run `pnpm -F @acme/web i18n:extract` and fill `en`.
+- Lingui source locale is `zh-Hant`; locales are `zh-Hant` and `en`. JSX uses `<Trans>`. React strings use `useLingui` from `@lingui/react/macro`; other strings use `t` from `@lingui/core/macro`. Static maps use `msg`, resolved with `t(descriptor)`. After changing strings, run `pnpm -F @shipping/web i18n:extract` and fill `en`.
 - Persist enums as English codes and translate the label in the client.
 - React Compiler is enabled. Add `memo`, `useMemo` or `useCallback` only with a one-line reason.
 

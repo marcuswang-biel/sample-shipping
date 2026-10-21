@@ -5,7 +5,7 @@ export const APP_LOCALES = ['zh-Hant', 'en'] as const;
 export type AppLocale = (typeof APP_LOCALES)[number];
 
 export const SOURCE_LOCALE: AppLocale = 'zh-Hant';
-export const LOCALE_STORAGE_KEY = 'acme-locale';
+export const LOCALE_STORAGE_KEY = 'shipping-locale';
 
 export const LOCALE_LABELS: Record<AppLocale, string> = {
 	'zh-Hant': '繁體中文',

@@ -9,7 +9,7 @@ export type RouterAppContext = Record<string, never>;
 export const Route = createRootRouteWithContext<RouterAppContext>()({
 	component: RootComponent,
 	head: () => ({
-		meta: [{ title: 'Acme' }],
+		meta: [{ title: '樣品寄送' }],
 	}),
 });
 

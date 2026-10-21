@@ -1,7 +1,7 @@
 import type { MessageDescriptor } from '@lingui/core';
 
-import { APP_ERROR_CODES, type AppErrorCode } from '@acme/shared/error-codes';
 import { msg } from '@lingui/core/macro';
+import { APP_ERROR_CODES, type AppErrorCode } from '@shipping/shared/error-codes';
 
 /** Translated text per backend error code. Resolve with `t(descriptor)` at the call site. */
 export const CLAIM_ERROR_MESSAGES: Partial<Record<AppErrorCode, MessageDescriptor>> = {

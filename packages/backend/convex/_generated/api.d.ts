@@ -15,6 +15,7 @@ import type * as http from "../http.js";
 import type * as init from "../init.js";
 import type * as lib_identity from "../lib/identity.js";
 import type * as migrations from "../migrations.js";
+import type * as shipments from "../shipments.js";
 import type * as viewer from "../viewer.js";
 
 import type {
@@ -31,6 +32,7 @@ declare const fullApi: ApiFromModules<{
   init: typeof init;
   "lib/identity": typeof lib_identity;
   migrations: typeof migrations;
+  shipments: typeof shipments;
   viewer: typeof viewer;
 }>;
 

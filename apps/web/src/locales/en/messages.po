@@ -6,28 +6,90 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
 "Language: en\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
 
-#: src/routes/claims.tsx:104
+#: src/routes/shipments.tsx:495
+msgid "（必填）"
+msgstr "(required)"
+
+#: src/routes/claims.tsx:107
 msgid "HK$500 或以下自動批准；每月上限 HK$5,000。"
 msgstr "Claims of HK$500 or less are approved automatically. Monthly limit: HK$5,000."
 
-#: src/routes/claims.tsx:132
+#: src/routes/shipments.tsx:375
+msgid "修改"
+msgstr "Edit"
+
+#: src/routes/shipments.tsx:444
+msgid "儲存"
+msgstr "Save"
+
+#: src/routes/shipments.tsx:444
+msgid "儲存中"
+msgstr "Saving"
+
+#: src/routes/shipments.tsx:286
+msgid "列表載入失敗，請再試一次。"
+msgstr "Couldn't load the list. Please try again."
+
+#: src/routes/claims.tsx:135
 msgid "刪除"
 msgstr "Delete"
+
+#: src/routes/shipments.tsx:447
+msgid "取消"
+msgstr "Cancel"
+
+#: src/routes/shipments.tsx:168
+msgid "可以先不填。填了才能寄出。"
+msgstr "You can leave this blank. A tracking number is required before shipping."
 
 #: src/auth/sign-in-panel.tsx:38
 msgid "名稱"
 msgstr "Name"
 
+#: src/routes/shipments.tsx:64
+msgid "單號最多 64 字。"
+msgstr "Tracking numbers can be at most 64 characters."
+
+#: src/features/shipments/shipment-errors.ts:11
+msgid "填了單號才能寄出，已寄出的單號也不能清空。"
+msgstr "A tracking number is required before shipping, and it can't be cleared after the sample has shipped."
+
+#: src/routes/shipments.tsx:393
+msgid "填了單號才能寄出。"
+msgstr "Add a tracking number before shipping."
+
+#: src/routes/shipments.tsx:380
+msgid "寄出"
+msgstr "Ship"
+
 #: src/components/header.tsx:26
-msgid "報銷"
-msgstr "Claims"
+msgid "寄送"
+msgstr "Shipments"
 
 #: src/auth/sign-in-panel.tsx:64
 msgid "密碼"
 msgstr "Password"
 
-#: src/routes/claims.tsx:126
+#: src/routes/shipments.tsx:364
+msgid "尚未填寫單號"
+msgstr "No tracking number yet"
+
+#: src/routes/shipments.tsx:458
+msgid "已寄出"
+msgstr "Shipped"
+
+#: src/routes/shipments.tsx:430
+msgid "已寄出的單號不能清空。"
+msgstr "A shipped sample must keep its tracking number."
+
+#: src/routes/claims.tsx:129
 msgid "已批准"
 msgstr "Approved"
 
@@ -35,37 +97,78 @@ msgstr "Approved"
 msgid "已有帳戶？登入"
 msgstr "Already have an account? Sign in"
 
+#: src/routes/shipments.tsx:459
+msgid "已簽收"
+msgstr "Received"
+
 #: src/auth/sign-in-panel.tsx:82
 msgid "建立帳戶"
 msgstr "Create account"
 
-#: src/routes/claims.tsx:126
+#: src/routes/claims.tsx:129
 msgid "待審批"
 msgstr "Pending review"
 
-#: src/routes/claims.tsx:112
+#: src/routes/shipments.tsx:162
+#: src/routes/shipments.tsx:424
+msgid "快遞單號"
+msgstr "Tracking number"
+
+#: src/routes/shipments.tsx:184
+msgid "我登記的"
+msgstr "Registered by me"
+
+#: src/routes/claims.tsx:115
 msgid "我的報銷"
 msgstr "My claims"
+
+#: src/routes/shipments.tsx:206
+msgid "所有在路上的"
+msgstr "In transit"
 
 #: src/features/claims/claim-errors.ts:9
 msgid "找不到這筆報銷。"
 msgstr "This claim was not found."
 
-#: src/routes/claims.tsx:95
+#: src/features/shipments/shipment-errors.ts:9
+msgid "找不到這筆寄送。"
+msgstr "This shipment was not found."
+
+#: src/routes/claims.tsx:98
 msgid "提交"
 msgstr "Submit"
 
 #: src/routes/claims.tsx:39
+#: src/routes/shipments.tsx:55
 msgid "操作失敗，請再試一次。"
 msgstr "Something went wrong. Please try again."
+
+#: src/routes/shipments.tsx:153
+#: src/routes/shipments.tsx:415
+msgid "收件人"
+msgstr "Recipient"
+
+#: src/routes/shipments.tsx:63
+msgid "收件人最多 120 字。"
+msgstr "Recipient names can be at most 120 characters."
 
 #: src/routes/claims.tsx:72
 msgid "新增報銷"
 msgstr "New claim"
 
-#: src/routes/claims.tsx:79
+#: src/routes/claims.tsx:82
+#: src/routes/shipments.tsx:144
+#: src/routes/shipments.tsx:405
 msgid "標題"
 msgstr "Title"
+
+#: src/routes/shipments.tsx:61
+msgid "標題最多 120 字。"
+msgstr "Titles can be at most 120 characters."
+
+#: src/routes/shipments.tsx:209
+msgid "現在沒有在路上的樣品。"
+msgstr "Nothing is in transit."
 
 #: src/auth/sign-in-panel.tsx:82
 #: src/routes/sign-in.tsx:23
@@ -84,23 +187,72 @@ msgstr "Sign-in failed"
 msgid "登出"
 msgstr "Sign out"
 
+#: src/routes/shipments.tsx:177
+msgid "登記"
+msgstr "Register"
+
+#: src/routes/shipments.tsx:177
+msgid "登記中"
+msgstr "Registering"
+
+#: src/routes/shipments.tsx:137
+msgid "登記樣品"
+msgstr "Register a sample"
+
+#: src/routes/shipments.tsx:385
+msgid "簽收"
+msgstr "Receive"
+
+#: src/routes/shipments.tsx:457
+msgid "草稿"
+msgstr "Draft"
+
+#: src/routes/shipments.tsx:432
+msgid "草稿可以清掉單號。"
+msgstr "You can clear the tracking number while this is a draft."
+
+#: src/routes/shipments.tsx:369
+msgid "處理中"
+msgstr "Working"
+
 #: src/components/locale-switcher.tsx:11
 msgid "語言"
 msgstr "Language"
 
 #: src/features/claims/claim-errors.ts:8
+#: src/features/shipments/shipment-errors.ts:8
 msgid "請先登入。"
 msgstr "Please sign in first."
+
+#: src/routes/shipments.tsx:62
+msgid "請填寫收件人。"
+msgstr "Enter a recipient."
+
+#: src/routes/shipments.tsx:60
+msgid "請填寫標題。"
+msgstr "Enter a title."
 
 #: src/features/claims/claim-errors.ts:10
 msgid "請填寫標題和大於零的金額。"
 msgstr "Enter a title and an amount greater than zero."
 
+#: src/features/shipments/shipment-errors.ts:10
+msgid "請填寫標題和收件人。標題和收件人最多 120 字，單號最多 64 字。"
+msgstr "Enter a title and a recipient. Titles and recipients can be at most 120 characters, and tracking numbers at most 64."
+
+#: src/routes/shipments.tsx:281
+msgid "載入中"
+msgstr "Loading"
+
+#: src/features/shipments/shipment-errors.ts:12
+msgid "這個狀態不能這樣改。"
+msgstr "That status change isn't allowed."
+
 #: src/features/claims/claim-errors.ts:11
 msgid "這筆報銷會超出本月額度。"
 msgstr "This claim would exceed your monthly limit."
 
-#: src/routes/claims.tsx:142
+#: src/routes/claims.tsx:145
 msgid "還沒有報銷。"
 msgstr "No claims yet."
 
@@ -108,7 +260,11 @@ msgstr "No claims yet."
 msgid "還沒有帳戶？建立一個"
 msgstr "No account yet? Create one"
 
-#: src/routes/claims.tsx:85
+#: src/routes/shipments.tsx:187
+msgid "還沒有登記。"
+msgstr "Nothing registered yet."
+
+#: src/routes/claims.tsx:88
 msgid "金額 (HKD)"
 msgstr "Amount (HKD)"
 

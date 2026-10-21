@@ -12,8 +12,8 @@
 							"convex/*",
 							"convex-helpers",
 							"convex-helpers/*",
-							"@acme/backend",
-							"@acme/backend/*"
+							"@shipping/backend",
+							"@shipping/backend/*"
 						],
 						"message": "packages/domain is pure business logic. Convex handlers call into it; it never imports Convex. See docs/adr/0001-effect-boundary-for-business-logic.md."
 					}

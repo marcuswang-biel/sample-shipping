@@ -1,5 +1,5 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@acme/web-ui';
 import { Trans } from '@lingui/react/macro';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@shipping/web-ui';
 import { createFileRoute, Navigate } from '@tanstack/react-router';
 import { useConvexAuth } from 'convex/react';
 
@@ -13,7 +13,7 @@ export const Route = createFileRoute('/sign-in')({
 function SignInPage() {
 	const { isAuthenticated, isLoading } = useConvexAuth();
 	if (isLoading) return <Loader />;
-	if (isAuthenticated) return <Navigate to="/claims" replace />;
+	if (isAuthenticated) return <Navigate to="/shipments" replace />;
 
 	return (
 		<div className="flex min-h-full items-center justify-center p-4">

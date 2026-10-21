@@ -1,12 +1,13 @@
 {
-	"name": "@acme/domain",
+	"name": "@shipping/domain",
 	"version": "0.0.1",
 	"private": true,
 	"description": "Business rules written in Effect. Pure TypeScript: never imports convex.",
 	"type": "module",
 	"exports": {
 		".": "./src/index.ts",
-		"./claims": "./src/claims/index.ts"
+		"./claims": "./src/claims/index.ts",
+		"./shipments": "./src/shipments/index.ts"
 	},
 	"scripts": {
 		"check": "run-s -c check:*",
@@ -22,8 +23,8 @@
 		"effect": "catalog:"
 	},
 	"devDependencies": {
-		"@acme/config": "workspace:*",
 		"@effect/vitest": "catalog:",
+		"@shipping/config": "workspace:*",
 		"npm-run-all2": "catalog:",
 		"typescript": "catalog:",
 		"vitest": "catalog:"

@@ -22,7 +22,7 @@ import authConfig from './auth.config';
 export const authComponent = createClient<DataModel>(components.betterAuth);
 
 /** Must match `scheme` in apps/native/app.json. */
-const DEFAULT_NATIVE_SCHEME = 'acme';
+const DEFAULT_NATIVE_SCHEME = 'shipping';
 
 export const createAuth = (ctx: GenericCtx<DataModel>) => {
 	// SITE_URL accepts a comma-separated list so dev deployments can trust several

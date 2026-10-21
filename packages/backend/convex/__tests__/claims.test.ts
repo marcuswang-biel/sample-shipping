@@ -1,8 +1,8 @@
 // @vitest-environment edge-runtime
 /// <reference types="vite/client" />
 
-import { convexErrorCode } from '@acme/shared/convex-error';
-import { APP_ERROR_CODES } from '@acme/shared/error-codes';
+import { convexErrorCode } from '@shipping/shared/convex-error';
+import { APP_ERROR_CODES } from '@shipping/shared/error-codes';
 import { describe, expect, it } from 'vitest';
 
 import { convexTest, signIn } from '../../test/harness';

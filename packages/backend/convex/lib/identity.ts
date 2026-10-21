@@ -1,4 +1,4 @@
-import { APP_ERROR_CODES, type AppErrorData } from '@acme/shared/error-codes';
+import { APP_ERROR_CODES, type AppErrorData } from '@shipping/shared/error-codes';
 import { ConvexError } from 'convex/values';
 
 import type { QueryCtx } from '../_generated/server';

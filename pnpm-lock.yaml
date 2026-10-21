@@ -167,12 +167,6 @@ importers:
 
   apps/native:
     dependencies:
-      '@acme/backend':
-        specifier: workspace:*
-        version: link:../../packages/backend
-      '@acme/shared':
-        specifier: workspace:*
-        version: link:../../packages/shared
       '@better-auth/core':
         specifier: 'catalog:'
         version: 1.6.11(@better-auth/utils@0.4.0)(@better-fetch/fetch@1.1.21)(better-call@1.3.5(zod@4.6.7))(jose@6.2.12)(kysely@0.28.18)(nanostores@1.5.5)
@@ -188,6 +182,12 @@ importers:
       '@expo/metro-runtime':
         specifier: ~56.0.21
         version: 56.0.21(@expo/log-box@56.0.14)(expo@56.0.23)(react-dom@19.2.3(react@19.2.3))(react-native@0.85.3(@babel/core@7.29.7)(@react-native/metro-config@0.85.3(@babel/core@7.29.7))(@types/react@19.2.7)(react@19.2.3))(react@19.2.3)
+      '@shipping/backend':
+        specifier: workspace:*
+        version: link:../../packages/backend
+      '@shipping/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
       better-auth:
         specifier: 'catalog:'
         version: 1.6.11(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(vitest@4.1.12(@edge-runtime/vm@3.2.0)(@types/node@26.6.5)(vite@6.4.4(@types/node@26.6.5)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.51.2)(yaml@2.9.1)))
@@ -249,15 +249,6 @@ importers:
 
   apps/web:
     dependencies:
-      '@acme/backend':
-        specifier: workspace:*
-        version: link:../../packages/backend
-      '@acme/shared':
-        specifier: workspace:*
-        version: link:../../packages/shared
-      '@acme/web-ui':
-        specifier: workspace:*
-        version: link:../../packages/web-ui
       '@convex-dev/better-auth':
         specifier: 'catalog:'
         version: 0.12.5(@standard-schema/spec@1.1.0)(better-auth@1.6.11(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(vitest@4.1.12(@edge-runtime/vm@3.2.0)(@types/node@22.20.5)(vite@6.4.4(@types/node@22.20.5)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.51.2)(yaml@2.9.1))))(convex-test@0.0.55(convex@1.47.0(react@19.2.3)))(convex@1.47.0(react@19.2.3))(react@19.2.3)(typescript@5.9.3)
@@ -270,6 +261,15 @@ importers:
       '@lingui/react':
         specifier: 'catalog:'
         version: 6.6.0(@babel/core@7.29.7)(@babel/types@7.29.8)(react@19.2.3)
+      '@shipping/backend':
+        specifier: workspace:*
+        version: link:../../packages/backend
+      '@shipping/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      '@shipping/web-ui':
+        specifier: workspace:*
+        version: link:../../packages/web-ui
       '@t3-oss/env-core':
         specifier: 'catalog:'
         version: 0.13.11(typescript@5.9.3)(valibot@1.5.0(typescript@5.9.3))(zod@4.6.7)
@@ -304,9 +304,6 @@ importers:
         specifier: 'catalog:'
         version: 4.6.7
     devDependencies:
-      '@acme/config':
-        specifier: workspace:*
-        version: link:../../packages/config
       '@lingui/babel-plugin-lingui-macro':
         specifier: 'catalog:'
         version: 6.6.0(@babel/core@7.29.7)(@babel/types@7.29.8)
@@ -319,6 +316,9 @@ importers:
       '@lingui/vite-plugin':
         specifier: 'catalog:'
         version: 6.6.0(@babel/core@7.29.7)(@lingui/babel-plugin-lingui-macro@6.6.0(@babel/core@7.29.7)(@babel/types@7.29.8))(vite@6.4.4(@types/node@22.20.5)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.51.2)(yaml@2.9.1))
+      '@shipping/config':
+        specifier: workspace:*
+        version: link:../../packages/config
       '@tanstack/router-plugin':
         specifier: 'catalog:'
         version: 1.168.47(@tanstack/react-router@1.170.45(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(rollup@4.64.10)(vite@6.4.4(@types/node@22.20.5)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.51.2)(yaml@2.9.1))
@@ -358,12 +358,6 @@ importers:
 
   packages/backend:
     dependencies:
-      '@acme/domain':
-        specifier: workspace:*
-        version: link:../domain
-      '@acme/shared':
-        specifier: workspace:*
-        version: link:../shared
       '@better-auth/core':
         specifier: 'catalog:'
         version: 1.6.11(@better-auth/utils@0.4.0)(@better-fetch/fetch@1.1.21)(better-call@1.3.5(zod@4.6.7))(jose@6.2.12)(kysely@0.28.18)(nanostores@1.5.5)
@@ -376,6 +370,12 @@ importers:
       '@convex-dev/migrations':
         specifier: 'catalog:'
         version: 0.3.7(convex-helpers@0.1.128(@standard-schema/spec@1.1.0)(convex@1.47.0(react@19.2.3))(react@19.2.3)(typescript@5.9.3)(zod@4.6.7))(convex-test@0.0.55(convex@1.47.0(react@19.2.3)))(convex@1.47.0(react@19.2.3))
+      '@shipping/domain':
+        specifier: workspace:*
+        version: link:../domain
+      '@shipping/shared':
+        specifier: workspace:*
+        version: link:../shared
       better-auth:
         specifier: 'catalog:'
         version: 1.6.11(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(vitest@4.1.12(@edge-runtime/vm@3.2.0)(@types/node@22.20.5)(vite@6.4.4(@types/node@22.20.5)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.51.2)(yaml@2.9.1)))
@@ -389,15 +389,15 @@ importers:
         specifier: 'catalog:'
         version: 4.0.0-beta.43
     devDependencies:
-      '@acme/config':
-        specifier: workspace:*
-        version: link:../config
       '@convex-dev/eslint-plugin':
         specifier: ^3.0.0
         version: 3.0.0(convex@1.47.0(react@19.2.3))(eslint@8.57.1)(typescript@5.9.3)
       '@edge-runtime/vm':
         specifier: 'catalog:'
         version: 3.2.0
+      '@shipping/config':
+        specifier: workspace:*
+        version: link:../config
       '@types/node':
         specifier: 'catalog:'
         version: 22.20.5
@@ -428,12 +428,12 @@ importers:
         specifier: 'catalog:'
         version: 4.0.0-beta.43
     devDependencies:
-      '@acme/config':
-        specifier: workspace:*
-        version: link:../config
       '@effect/vitest':
         specifier: 'catalog:'
         version: 4.0.0-beta.43(effect@4.0.0-beta.43)(vitest@4.1.12(@edge-runtime/vm@3.2.0)(@types/node@26.6.5)(vite@6.4.4(@types/node@26.6.5)(jiti@2.7.0)(lightningcss@1.33.0)(terser@5.51.2)(yaml@2.9.1)))
+      '@shipping/config':
+        specifier: workspace:*
+        version: link:../config
       npm-run-all2:
         specifier: 'catalog:'
         version: 8.0.4
@@ -459,7 +459,7 @@ importers:
         specifier: 'catalog:'
         version: 1.47.0(react@19.2.3)
     devDependencies:
-      '@acme/config':
+      '@shipping/config':
         specifier: workspace:*
         version: link:../config
       npm-run-all2:
@@ -487,7 +487,7 @@ importers:
         specifier: ^3.3.1
         version: 3.7.0
     devDependencies:
-      '@acme/config':
+      '@shipping/config':
         specifier: workspace:*
         version: link:../config
       '@types/react':

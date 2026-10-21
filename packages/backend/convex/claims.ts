@@ -6,14 +6,14 @@
  *
  *   1. authorize (owner = auth subject),
  *   2. read whatever the rule needs from `ctx.db`,
- *   3. run the Effect program from `@acme/domain` and map its tagged errors to
+ *   3. run the Effect program from `@shipping/domain` and map its tagged errors to
  *      `ConvexError` codes,
  *   4. write the decision.
  *
  * The rule itself lives in `packages/domain/src/claims` and never imports Convex.
  */
-import { ClaimPolicyLive, evaluateClaim, type ClaimError } from '@acme/domain/claims';
-import { APP_ERROR_CODES, type AppErrorData } from '@acme/shared/error-codes';
+import { ClaimPolicyLive, evaluateClaim, type ClaimError } from '@shipping/domain/claims';
+import { APP_ERROR_CODES, type AppErrorData } from '@shipping/shared/error-codes';
 import { ConvexError, v } from 'convex/values';
 import { Cause, Effect, Exit } from 'effect';
 

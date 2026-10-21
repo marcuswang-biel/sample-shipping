@@ -1,5 +1,5 @@
-import { Button, Input, Label } from '@acme/web-ui';
 import { Trans, useLingui } from '@lingui/react/macro';
+import { Button, Input, Label } from '@shipping/web-ui';
 import { useState, type FormEvent } from 'react';
 
 import { authClient } from './auth-client';

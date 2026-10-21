@@ -29,7 +29,7 @@
 		"anti-slop/no-module-mocking": [
 			"error",
 			{
-				"ownedModulePrefixes": ["./", "../", "@/", "@acme/"]
+				"ownedModulePrefixes": ["./", "../", "@/", "@shipping/"]
 			}
 		],
 		"anti-slop/no-object-parameters": "error",

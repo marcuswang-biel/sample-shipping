@@ -1,5 +1,5 @@
 {
-	"name": "@acme/web",
+	"name": "@shipping/web",
 	"version": "0.1.0",
 	"private": true,
 	"type": "module",
@@ -19,13 +19,13 @@
 		"test": "vitest run"
 	},
 	"dependencies": {
-		"@acme/backend": "workspace:*",
-		"@acme/shared": "workspace:*",
-		"@acme/web-ui": "workspace:*",
 		"@convex-dev/better-auth": "catalog:",
 		"@convex-dev/react-query": "catalog:",
 		"@lingui/core": "catalog:",
 		"@lingui/react": "catalog:",
+		"@shipping/backend": "workspace:*",
+		"@shipping/shared": "workspace:*",
+		"@shipping/web-ui": "workspace:*",
 		"@t3-oss/env-core": "catalog:",
 		"@tailwindcss/vite": "catalog:",
 		"@tanstack/react-query": "catalog:",
@@ -39,11 +39,11 @@
 		"zod": "catalog:"
 	},
 	"devDependencies": {
-		"@acme/config": "workspace:*",
 		"@lingui/babel-plugin-lingui-macro": "catalog:",
 		"@lingui/cli": "catalog:",
 		"@lingui/conf": "catalog:",
 		"@lingui/vite-plugin": "catalog:",
+		"@shipping/config": "workspace:*",
 		"@tanstack/router-plugin": "catalog:",
 		"@types/node": "catalog:",
 		"@types/react": "catalog:",

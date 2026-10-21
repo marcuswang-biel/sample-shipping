@@ -9,7 +9,7 @@ export type ClaimLimits = {
 };
 
 export class ClaimPolicy extends ServiceMap.Service<ClaimPolicy, ClaimLimits>()(
-	'@acme/domain/ClaimPolicy',
+	'@shipping/domain/ClaimPolicy',
 ) {}
 
 export const DEFAULT_CLAIM_POLICY: ClaimLimits = {
