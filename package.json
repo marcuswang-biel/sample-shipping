@@ -1,0 +1,39 @@
+{
+	"name": "acme-monorepo",
+	"private": true,
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"type": "module",
+	"scripts": {
+		"check": "turbo check",
+		"lint": "turbo lint",
+		"test": "turbo test",
+		"fmt": "turbo fmt",
+		"dev": "turbo dev --filter=!@acme/native",
+		"build": "turbo build",
+		"check-types": "turbo check-types",
+		"dev:web": "turbo -F @acme/web dev",
+		"dev:native": "turbo -F @acme/native dev",
+		"dev:backend": "turbo -F @acme/backend dev",
+		"dev:setup": "turbo -F @acme/backend dev:setup",
+		"worktree:setup": "node scripts/setup-worktree.mjs",
+		"rename": "node scripts/rename.mjs"
+	},
+	"devDependencies": {
+		"@oxlint/plugins": "catalog:",
+		"@types/node": "catalog:",
+		"eslint-plugin-app-lingui": "workspace:*",
+		"oxfmt": "catalog:",
+		"oxlint": "catalog:",
+		"oxlint-tsgolint": "catalog:",
+		"tailwindcss": "catalog:",
+		"turbo": "^2.10.12",
+		"typescript": "catalog:"
+	},
+	"engines": {
+		"node": ">=22.19.0"
+	},
+	"packageManager": "pnpm@10.34.5"
+}

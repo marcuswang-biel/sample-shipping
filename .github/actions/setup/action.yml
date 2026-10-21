@@ -1,0 +1,25 @@
+name: Setup
+description: >
+  Toolchain setup shared by every deploy job: pnpm, Node 24, and a
+  frozen-lockfile install. Single source of truth — change the Node
+  version or install flags here, not in each job. Requires the repo to
+  already be checked out (reference it with `uses: ./.github/actions/setup`
+  AFTER actions/checkout).
+
+runs:
+  using: composite
+  steps:
+    - uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+
+    # Official verified merge after v7.0.0; rebuilds the bundle with the
+    # brace-expansion security fixes from actions/setup-node#1599.
+    - uses: actions/setup-node@e51e5fe84fc33b4c73ebe40526b2694712b5b858 # v7
+      with:
+        node-version: 24
+        # Self-hosted runners usually keep pnpm's store on local disk; downloading
+        # the same store from Actions cache there only adds time.
+        cache: ${{ runner.environment == 'github-hosted' && 'pnpm' || '' }}
+
+    - name: Install dependencies
+      shell: bash
+      run: pnpm install --frozen-lockfile

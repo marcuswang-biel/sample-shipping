@@ -1,0 +1,121 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2026-10-20 01:13+0800\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: zh-Hant\n"
+
+#: src/routes/claims.tsx:104
+msgid "HK$500 或以下自動批准；每月上限 HK$5,000。"
+msgstr "HK$500 或以下自動批准；每月上限 HK$5,000。"
+
+#: src/routes/claims.tsx:132
+msgid "刪除"
+msgstr "刪除"
+
+#: src/auth/sign-in-panel.tsx:38
+msgid "名稱"
+msgstr "名稱"
+
+#: src/components/header.tsx:26
+msgid "報銷"
+msgstr "報銷"
+
+#: src/auth/sign-in-panel.tsx:64
+msgid "密碼"
+msgstr "密碼"
+
+#: src/routes/claims.tsx:126
+msgid "已批准"
+msgstr "已批准"
+
+#: src/auth/sign-in-panel.tsx:90
+msgid "已有帳戶？登入"
+msgstr "已有帳戶？登入"
+
+#: src/auth/sign-in-panel.tsx:82
+msgid "建立帳戶"
+msgstr "建立帳戶"
+
+#: src/routes/claims.tsx:126
+msgid "待審批"
+msgstr "待審批"
+
+#: src/routes/claims.tsx:112
+msgid "我的報銷"
+msgstr "我的報銷"
+
+#: src/features/claims/claim-errors.ts:9
+msgid "找不到這筆報銷。"
+msgstr "找不到這筆報銷。"
+
+#: src/routes/claims.tsx:95
+msgid "提交"
+msgstr "提交"
+
+#: src/routes/claims.tsx:39
+msgid "操作失敗，請再試一次。"
+msgstr "操作失敗，請再試一次。"
+
+#: src/routes/claims.tsx:72
+msgid "新增報銷"
+msgstr "新增報銷"
+
+#: src/routes/claims.tsx:79
+msgid "標題"
+msgstr "標題"
+
+#: src/auth/sign-in-panel.tsx:82
+#: src/routes/sign-in.tsx:23
+msgid "登入"
+msgstr "登入"
+
+#: src/routes/sign-in.tsx:26
+msgid "登入以使用內部系統"
+msgstr "登入以使用內部系統"
+
+#: src/auth/sign-in-panel.tsx:29
+msgid "登入失敗"
+msgstr "登入失敗"
+
+#: src/components/header.tsx:39
+msgid "登出"
+msgstr "登出"
+
+#: src/components/locale-switcher.tsx:11
+msgid "語言"
+msgstr "語言"
+
+#: src/features/claims/claim-errors.ts:8
+msgid "請先登入。"
+msgstr "請先登入。"
+
+#: src/features/claims/claim-errors.ts:10
+msgid "請填寫標題和大於零的金額。"
+msgstr "請填寫標題和大於零的金額。"
+
+#: src/features/claims/claim-errors.ts:11
+msgid "這筆報銷會超出本月額度。"
+msgstr "這筆報銷會超出本月額度。"
+
+#: src/routes/claims.tsx:142
+msgid "還沒有報銷。"
+msgstr "還沒有報銷。"
+
+#: src/auth/sign-in-panel.tsx:90
+msgid "還沒有帳戶？建立一個"
+msgstr "還沒有帳戶？建立一個"
+
+#: src/routes/claims.tsx:85
+msgid "金額 (HKD)"
+msgstr "金額 (HKD)"
+
+#: src/routes/claims.tsx:47
+msgid "金額格式不正確。"
+msgstr "金額格式不正確。"
+
+#: src/auth/sign-in-panel.tsx:50
+msgid "電郵"
+msgstr "電郵"

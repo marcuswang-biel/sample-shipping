@@ -1,0 +1,48 @@
+{
+	"name": "@acme/backend",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Convex backend",
+	"type": "module",
+	"exports": {
+		"./convex/_generated/api": "./convex/_generated/api.js",
+		"./convex/_generated/dataModel": "./convex/_generated/dataModel.js"
+	},
+	"scripts": {
+		"dev": "convex dev --run init",
+		"dev:setup": "convex dev --configure --until-success",
+		"check": "run-s -c check:*",
+		"check:codegen": "node ../../scripts/verify-convex-codegen.mjs convex",
+		"check:lint": "oxlint .",
+		"check:fmt": "oxfmt --check .",
+		"check:types": "tsc --noEmit -p convex",
+		"check-types": "tsc --noEmit -p convex",
+		"lint": "oxlint .",
+		"fmt": "oxfmt --write .",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"@acme/domain": "workspace:*",
+		"@acme/shared": "workspace:*",
+		"@better-auth/core": "catalog:",
+		"@better-auth/expo": "catalog:",
+		"@convex-dev/better-auth": "catalog:",
+		"@convex-dev/migrations": "catalog:",
+		"better-auth": "catalog:",
+		"convex": "catalog:",
+		"convex-helpers": "catalog:",
+		"effect": "catalog:"
+	},
+	"devDependencies": {
+		"@acme/config": "workspace:*",
+		"@convex-dev/eslint-plugin": "^3.0.0",
+		"@edge-runtime/vm": "catalog:",
+		"@types/node": "catalog:",
+		"convex-test": "catalog:",
+		"eslint": "8.57.1",
+		"npm-run-all2": "catalog:",
+		"typescript": "catalog:",
+		"vite": "catalog:",
+		"vitest": "catalog:"
+	}
+}

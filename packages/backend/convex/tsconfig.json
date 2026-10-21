@@ -1,0 +1,10 @@
+{
+	"extends": "@acme/config/tsconfig.base.json",
+	"compilerOptions": {
+		"lib": ["ESNext", "dom"],
+		"allowJs": true,
+		"jsx": "react-jsx"
+	},
+	"include": ["./**/*"],
+	"exclude": ["./_generated"]
+}

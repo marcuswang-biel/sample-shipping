@@ -1,0 +1,9 @@
+{
+	"extends": "@acme/config/tsconfig.base.json",
+	"compilerOptions": {
+		"lib": ["ESNext"],
+		"declaration": true,
+		"declarationMap": true
+	},
+	"include": ["src"]
+}

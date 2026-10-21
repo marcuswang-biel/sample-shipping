@@ -1,0 +1,16 @@
+{
+	"$schema": "../../node_modules/oxlint/configuration_schema.json",
+	"extends": ["../../.oxlintrc.json"],
+	"jsPlugins": ["@convex-dev/eslint-plugin"],
+	"overrides": [
+		{
+			"files": ["convex/**/*.ts"],
+			"rules": {
+				"@convex-dev/no-old-registered-function-syntax": "error",
+				"@convex-dev/require-args-validator": "error",
+				"@convex-dev/explicit-table-ids": "error",
+				"@convex-dev/import-wrong-runtime": "warn"
+			}
+		}
+	]
+}

@@ -1,0 +1,39 @@
+name: pr-title
+
+# Squash-merge makes the PR title the commit Release Please parses, and only
+# feat/fix/perf cut a release — a type-less title strands the change on main.
+on:
+  pull_request:
+    # `synchronize` looks redundant — only `edited` can change a title — but a
+    # check that never re-reports on an updated head blocks the merge the moment
+    # this becomes a required check, and release-please force-pushes its release
+    # branch. Five seconds a push to stay immune to that.
+    types: [opened, edited, reopened, synchronize]
+
+permissions: {}
+
+concurrency:
+  group: pr-title-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  pr-title:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          PATTERN='^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z0-9/_-]+\))?!?: [^A-Z].*$'
+          if ! printf '%s' "$TITLE" | grep -Eq "$PATTERN"; then
+            {
+              echo "::error title=Invalid PR title::PR title must be a Conventional Commit."
+              echo ""
+              echo "Got:      $TITLE"
+              echo "Expected: <type>(<scope>): <subject>   e.g.  fix(web): restore the buffered draft inputs"
+              echo ""
+              echo "Subjects must not start with an uppercase letter. Only feat, fix and perf"
+              echo "open a release PR — if this change needs production, it has to be one of those."
+            } >&2
+            exit 1
+          fi

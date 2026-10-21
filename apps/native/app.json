@@ -1,0 +1,22 @@
+{
+	"expo": {
+		"name": "Acme",
+		"slug": "acme",
+		"version": "0.1.0",
+		"scheme": "acme",
+		"orientation": "portrait",
+		"userInterfaceStyle": "automatic",
+		"ios": {
+			"supportsTablet": true,
+			"bundleIdentifier": "com.acme.app"
+		},
+		"android": {
+			"package": "com.acme.app"
+		},
+		"plugins": ["expo-router", "expo-secure-store", "expo-web-browser"],
+		"experiments": {
+			"typedRoutes": true,
+			"reactCompiler": true
+		}
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"$schema": "./node_modules/oxfmt/configuration_schema.json",
+	"printWidth": 100,
+	"useTabs": true,
+	"tabWidth": 2,
+	"semi": true,
+	"singleQuote": true,
+	"trailingComma": "all",
+	"bracketSpacing": true,
+	"arrowParens": "always",
+	"sortImports": {
+		"groups": [
+			"type-import",
+			["value-builtin", "value-external"],
+			"type-internal",
+			"value-internal",
+			["type-parent", "type-sibling", "type-index"],
+			["value-parent", "value-sibling", "value-index"],
+			"unknown"
+		],
+		"newlinesBetween": true
+	},
+	"sortTailwindcss": {
+		"functions": ["cn", "clsx", "cva"]
+	},
+	"ignorePatterns": [
+		"**/.next",
+		"**/dist",
+		"**/.turbo",
+		"**/dev-dist",
+		"**/routeTree.gen.ts",
+		"**/convex/_generated",
+		"**/node_modules",
+		"**/vfs_fonts.js",
+		"**/pdf.worker.min.mjs",
+		"**/pnpm-lock.yaml",
+		"**/CHANGELOG.md",
+		"**/.expo"
+	]
+}

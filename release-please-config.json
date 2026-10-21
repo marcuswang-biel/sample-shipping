@@ -1,0 +1,18 @@
+{
+	"$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+	"packages": {
+		"packages/backend": {
+			"release-type": "node",
+			"component": "backend"
+		},
+		"apps/web": {
+			"release-type": "node",
+			"component": "web"
+		},
+		"apps/native": {
+			"release-type": "simple",
+			"package-name": "native",
+			"component": "native"
+		}
+	}
+}

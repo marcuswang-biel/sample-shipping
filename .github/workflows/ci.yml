@@ -1,0 +1,57 @@
+name: CI
+
+# Pull requests only. Nothing re-runs this on `main`, because the `main` ruleset
+# requires these checks to pass on a branch that is up to date with `main`, so
+# the squash result is a tree this workflow already tested. `release-please.yml`
+# deliberately has no CI job of its own for the same reason.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions: {}
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+env:
+  TURBO_TELEMETRY_DISABLED: 1
+
+jobs:
+  # One turbo task family per runner. Everything in a single job shares two
+  # cores, and turbo happily starts ten package tasks on them — a web lint that
+  # costs 9s of CPU took 130s that way, and the backend suite took 340s against
+  # 31s locally. Splitting buys real cores rather than dividing the same two.
+  ci:
+    name: ${{ matrix.task }} # required contexts: check / build / test — never rename
+    # Deliberately no router job and no `needs`: GitHub counts a *skipped*
+    # required check as a success, so a job these three depended on could fail
+    # and turn the merge box green on a tree CI never ran.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read # checkout only
+    strategy:
+      fail-fast: false # a lint failure should not hide a broken build
+      matrix:
+        task: [check, build, test]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: ./.github/actions/setup
+
+      # Rolling cache: the sha-keyed entry never hits, so every run restores the
+      # newest prefix match and saves a fresh one. A new pull request's first run
+      # is cold; later pushes restore that branch's own cache. `runner.os` keeps a
+      # Linux-built entry from being replayed on another OS.
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: .turbo/cache
+          key: turbo-${{ runner.os }}-${{ matrix.task }}-${{ github.sha }}
+          restore-keys: turbo-${{ runner.os }}-${{ matrix.task }}-
+
+      - run: pnpm exec turbo run "$TASK"
+        env:
+          TASK: ${{ matrix.task }}

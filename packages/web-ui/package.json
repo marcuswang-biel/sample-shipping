@@ -1,0 +1,38 @@
+{
+	"name": "@acme/web-ui",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts"
+	},
+	"scripts": {
+		"check": "run-s -c check:*",
+		"check:fmt": "oxfmt --check .",
+		"check:lint": "oxlint .",
+		"check:types": "tsc --noEmit",
+		"check-types": "tsc --noEmit",
+		"fmt": "oxfmt --write .",
+		"lint": "oxlint .",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"class-variance-authority": "^0.7.1",
+		"clsx": "^2.1.1",
+		"radix-ui": "^1.4.3",
+		"tailwind-merge": "^3.3.1"
+	},
+	"devDependencies": {
+		"@acme/config": "workspace:*",
+		"@types/react": "catalog:",
+		"@types/react-dom": "catalog:",
+		"npm-run-all2": "catalog:",
+		"react": "catalog:",
+		"react-dom": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	},
+	"peerDependencies": {
+		"react": "^19.1.0"
+	}
+}

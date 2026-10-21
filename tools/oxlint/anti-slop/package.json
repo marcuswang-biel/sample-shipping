@@ -1,0 +1,23 @@
+{
+	"name": "@acme/oxlint-anti-slop",
+	"version": "0.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"check": "run-s -c check:*",
+		"check:types": "tsc --noEmit -p tsconfig.json",
+		"check:lint": "oxlint .",
+		"check:fmt": "oxfmt --check .",
+		"check:test": "node --experimental-strip-types --test tests/*.test.ts tests/*.test.mjs",
+		"check-types": "tsc --noEmit -p tsconfig.json",
+		"lint": "oxlint .",
+		"fmt": "oxfmt .",
+		"test": "node --experimental-strip-types --test tests/*.test.ts tests/*.test.mjs"
+	},
+	"devDependencies": {
+		"npm-run-all2": "catalog:"
+	},
+	"engines": {
+		"node": ">=22.12.0"
+	}
+}

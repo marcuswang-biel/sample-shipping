@@ -1,0 +1,49 @@
+# Dependencies
+node_modules
+.pnpm-store
+
+# Build outputs
+dist
+build
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env*.local
+
+# Convex local backend state (per worktree, never committed)
+.convex
+
+# Expo
+.expo
+apps/native/ios
+apps/native/android
+expo-env.d.ts
+
+# IDEs and editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea
+*.swp
+.DS_Store
+
+# Logs
+*.log
+
+# Turbo
+.turbo
+
+# Testing
+coverage
+
+# Misc
+*.tgz
+.cache
+tmp
+temp
+.claude/*
+.agents/*
+
+# TanStack Router plugin cache
+.tanstack

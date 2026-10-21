@@ -1,0 +1,31 @@
+{
+	"name": "@acme/shared",
+	"version": "0.0.1",
+	"private": true,
+	"description": "Shared constants and types used by the backend and every client",
+	"type": "module",
+	"exports": {
+		".": "./src/index.ts",
+		"./convex-error": "./src/convex-error.ts",
+		"./error-codes": "./src/error-codes.ts"
+	},
+	"scripts": {
+		"check": "run-s -c check:*",
+		"check:lint": "oxlint .",
+		"check:fmt": "oxfmt --check .",
+		"check:types": "tsc --noEmit",
+		"check-types": "tsc --noEmit",
+		"lint": "oxlint .",
+		"fmt": "oxfmt --write .",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"convex": "catalog:"
+	},
+	"devDependencies": {
+		"@acme/config": "workspace:*",
+		"npm-run-all2": "catalog:",
+		"typescript": "catalog:",
+		"vitest": "catalog:"
+	}
+}

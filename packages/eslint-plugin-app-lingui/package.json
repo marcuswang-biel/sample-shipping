@@ -1,0 +1,17 @@
+{
+	"name": "eslint-plugin-app-lingui",
+	"version": "0.0.0",
+	"private": true,
+	"main": "index.cjs",
+	"scripts": {
+		"check-types": "true",
+		"check": "true",
+		"lint": "true",
+		"fmt": "true",
+		"test": "vitest run"
+	},
+	"devDependencies": {
+		"eslint": "8.57.1",
+		"vitest": "catalog:"
+	}
+}

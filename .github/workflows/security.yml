@@ -1,0 +1,39 @@
+name: Security Analysis
+
+# Audits the workflows themselves: permissions, credential persistence, action
+# pinning, template injection.
+# Pull requests only, for the same reason release-please.yml carries no CI: the
+# main ruleset requires a branch to be up to date before it can merge, so the
+# tree that lands is the tree this already audited. A push run on main would be
+# re-auditing the identical tree.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+      - '.github/actions/**'
+
+permissions: {} # empty by default; the job below grants only what it needs
+
+concurrency:
+  group: security-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read # private repo: checkout needs this to clone
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+
+      - uses: taiki-e/install-action@3d7d7cd5ac7f994c1892ae0c06165095b9139094 # v2.85.1
+        with:
+          tool: zizmor@1.28.0
+
+      # The CLI rather than zizmor-action: a private repo without Advanced
+      # Security would 403 on the action's default SARIF upload.
+      - run: zizmor --strict-collection --show-audit-urls=always --min-severity=medium .
